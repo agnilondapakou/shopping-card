@@ -89,7 +89,7 @@ function renderCart() {
     cart.forEach(item => {
       const cartItemDiv = document.createElement('div');
       cartItemDiv.innerHTML = `
-        <p>${item.name} - $${item.price}</p>
+        <p>${item.name} - $${item.price} x ${item.quantity}</p>
         <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
         <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
         <button onclick="removeFromCart(${item.id})">Remove</button>
